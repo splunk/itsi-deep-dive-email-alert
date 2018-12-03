@@ -1,6 +1,6 @@
-# README
+# Splunk ITSI Deep Dive Email Alert
 
-This will provide Splunk ITSI users the ability to send an email alert of underlying Deep Dives (KPIs and Services) of a Notable Event.
+> This will provide Splunk ITSI users the ability to send an email alert of underlying Deep Dives (KPIs and Services) of a Notable Event.
 
 ## Pre-requisites
 * Required libraries ([if not already installed](http://dev.splunk.com/view/python-sdk/SP-CAAAEDG)):

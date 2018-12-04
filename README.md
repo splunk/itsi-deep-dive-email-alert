@@ -1,6 +1,6 @@
 # Splunk ITSI Deep Dive Email Alert
 
-> This will provide Splunk ITSI users the ability to send an email alert of underlying Deep Dives (KPIs and Services) of a Notable Event.
+This will provide Splunk ITSI users the ability to send an email alert of underlying Deep Dives (KPIs and Services) of a Notable Event.
 
 ## Pre-requisites
 * Required libraries ([if not already installed](http://dev.splunk.com/view/python-sdk/SP-CAAAEDG)):
@@ -13,25 +13,12 @@
   * Save your changes
 
 ## Installation
-* Edit `bin/itsi_deepdive_email.py`
-```python
-# at line 22-23
-HOST = '!! Please add your Splunk instance host here (e.g. mysplunk.instance.io) !!'
-PORT = '!! Please add its port here (e.g. 8000) !!'
-```
-* Edit `bin/itsi_deepdive_email_utils.py`
-```python
-# at line 3-6
-HOST = "localhost"
-PORT = 8089
-USERNAME = "!! Please provide your username here (e.g. admin) !!"
-PASSWORD = "!! Please provide your password here (e.g. admin) !!"
-```
+
 * If not already existing, copy `local/*.conf` into a local version of `$SPLUNK_HOME/etc/apps/SA-ITOA/default/notable_event_actions.conf` and `$SPLUNK_HOME/etc/apps/SA-ITOA/default/alert_actions.conf`
-> If files do already exist, just add `local/*.conf` stanzas into the corresponding ones
+    > If files do already exist, just add `local/*.conf` stanzas into the corresponding ones
 
 * Copy `local/data/ui/alerts/itsi_deepdive_email.html` to `$SPLUNK_HOME/etc/apps/SA-ITOA/local/data/ui/alerts`
-> Create the whole path if not existing
+    > Create the whole path if not existing
 
 * Add stanzas of `README/*.spec` into `$SPLUNK_HOME/etc/apps/SA-ITOA/README/alert_actions.conf.spec` and `$SPLUNK_HOME/etc/apps/SA-ITOA/README/savedsearches.conf.spec` respectively
 * Copy `bin/*` to `$SPLUNK_HOME/etc/apps/SA-ITOA/bin` and make sure their ownership and permissions are as shown below
@@ -48,6 +35,23 @@ PASSWORD = "!! Please provide your password here (e.g. admin) !!"
 ~$ chown root:root itsi_deepdive_email.py
 ~$ chown root:root itsi_deepdive_email_utils.py
 ```
+
+* Edit `$SPLUNK_HOME/etc/apps/SA-ITOA/bin/itsi_deepdive_email.py`
+```python
+# at line 22-23
+HOST = '!! Please add your Splunk instance host here (e.g. mysplunk.instance.io) !!'
+PORT = '!! Please add its port here (e.g. 8000) !!'
+```
+
+* Edit `$SPLUNK_HOME/etc/apps/SA-ITOA/bin/itsi_deepdive_email_utils.py`
+```python
+# at line 3-6
+HOST = "localhost"
+PORT = 8089
+USERNAME = "!! Please provide your username here (e.g. admin) !!"
+PASSWORD = "!! Please provide your password here (e.g. admin) !!"
+```
+
 * Restart `splunk` service
 
 ## Usage

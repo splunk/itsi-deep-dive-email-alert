@@ -4,7 +4,7 @@ import sys
 import json
 import platform
 import subprocess
-import emaillib
+import itsi_deepdive_email_utils
 import urllib2
 import re
 
@@ -62,7 +62,7 @@ class Email(CustomEventActionBase):
 
     def get_link(self, lst_kpi):
         # Retrieving data
-        laneSettingsCollection = json.dumps(emaillib.getEntities(lst_kpi))\
+        laneSettingsCollection = json.dumps(itsi_deepdive_email_utils.getEntities(lst_kpi))\
                                      .replace(": ",":")\
                                      .replace(", ", ",")
         # Building up the link
@@ -133,7 +133,7 @@ class Email(CustomEventActionBase):
             config['msg'] = self.get_email_body(deepdive_urls)
 
             # Send email.
-            res, res_msg = emaillib.send_email(config)
+            res, res_msg = itsi_deepdive_email_utils.send_email(config)
             if not res:
                 raise Exception(res_msg)
             self.logger.info(res_msg)

@@ -19,7 +19,7 @@
 HOST = '!! Please add your Splunk instance host here (e.g. mysplunk.instance.io) !!'
 PORT = '!! Please add its port here (e.g. 8000) !!'
 ```
-* Edit `bin/emaillib.py`
+* Edit `bin/itsi_deepdive_email_utils.py`
 ```python
 # at line 3-6
 HOST = "localhost"
@@ -39,14 +39,14 @@ PASSWORD = "!! Please provide your password here (e.g. admin) !!"
 # Verify
 ~$ cd $SPLUNK_HOME/etc/apps/SA-ITOA/bin
 ~$ ls -la | grep email
--rw-r--r--.  1 root root  1938 Nov 21 09:55 emaillib.py
+-rw-r--r--.  1 root root  1938 Nov 21 09:55 itsi_deepdive_email_utils.py
 -rw-r--r--.  1 root root  5402 Nov 21 09:55 itsi_deepdive_email.py
 # Change permissions
 ~$ chmod 644 itsi_deepdive_email.py
-~$ chmod 644 emaillib.py
+~$ chmod 644 itsi_deepdive_email_utils.py
 # Change ownership
 ~$ chown root:root itsi_deepdive_email.py
-~$ chown root:root emaillib.py
+~$ chown root:root itsi_deepdive_email_utils.py
 ```
 * Restart `splunk` service
 

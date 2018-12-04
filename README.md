@@ -59,16 +59,19 @@ PASSWORD = "!! Please provide your password here (e.g. admin) !!"
 * Enter the app *IT Service Intelligence* among available ones
 * Select *Notable Events Review* from the navigation bar
 * Click on the event you want to send a custom email from
-* Click on *Actions > Custom send email* as shown ![here](screenshot.png "Actions/Custom send email overview")
+* Click on *Actions > Custom send email* as shown below ![here](screenshot.png "Actions/Custom send email overview")
 * Configure the action by filling fields such as
   * To: Email recipient
   * Subject: Email subject
 * Press *Done*
 
+Specified recipients shall have now received an email listing both **Contributing KPIs** and **Possible Affected Services** Deep Dive links in its body. By clicking on them users can directly access data in dedicated Deep Dive dashboards.
+
 ## References
 * Notable Events
     * [Notable Event Actions SDK reference](http://docs.splunk.com/Documentation/ITSI/4.0.3/Configure/NotableEventsActionSDKreference)
     * [Set up custom episode actions](https://docs.splunk.com/Documentation/ITSI/latest/User/Setupandrunnotableeventactions#Set_up_custom_episode_actions)
+    * [ITSI Configuration Files](http://docs.splunk.com/Documentation/ITSI/4.0.3/Configure/ListofITSIconfigurationfiles)
 * Send Email
     * [Sendemail command](http://docs.splunk.com/Documentation/Splunk/7.2.1/SearchReference/Sendemail)
     * [Configure email notification](https://docs.splunk.com/Documentation/Splunk/7.2.0/Alert/Emailnotification#Configure_email_notification_for_your_Splunk_instance)

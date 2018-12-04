@@ -1,9 +1,12 @@
+# Copyright (C) 2005-2018 Splunk Inc. All Rights Reserved.
+
 import sys
+import itsi_deepdive_email_config as cfg
 
 HOST = "localhost"
-PORT = 8089
-USERNAME = "!! Please provide your username here (e.g. admin) !!"
-PASSWORD = "!! Please provide your password here (e.g. admin) !!"
+PORT = int(cfg.splunk['mgmt_port'])
+USERNAME = cfg.splunk['username']
+PASSWORD = cfg.splunk['password']
 
 def connect():
     import splunklib.client as client

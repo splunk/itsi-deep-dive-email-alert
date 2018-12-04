@@ -5,6 +5,7 @@ import json
 import platform
 import subprocess
 import itsi_deepdive_email_utils
+import itsi_deepdive_email_config as cfg
 import urllib2
 import re
 
@@ -19,8 +20,8 @@ from itsi.event_management.sdk.custom_event_action_base import CustomEventAction
 
 class Email(CustomEventActionBase):
 
-    HOST = '!! Please add your Splunk instance host here (e.g. mysplunk.instance.io) !!'
-    PORT = '!! Please add its port here (e.g. 8000) !!'
+    HOST = cfg.splunk['public_host']
+    PORT = cfg.splunk['port']
 
     CONTRIBUTING_KPI = 0
     AFFECTED_SERVICES = 1

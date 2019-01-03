@@ -2,6 +2,8 @@
 
 This will provide Splunk ITSI users the ability to send an email alert of underlying Deep Dives (KPIs and Services) of a Notable Event.
 
+Tested on Splunk Enterprise v7.1.3 with IT Service Intelligence v3.1.3.
+
 ## Pre-requisites
 * Required libraries ([if not already installed](http://dev.splunk.com/view/python-sdk/SP-CAAAEDG)):
   * [Splunk SDK for Python](http://dev.splunk.com/python)

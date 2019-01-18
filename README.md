@@ -88,3 +88,5 @@ Curious to know who the authors are? [Check them out](https://github.com/splunk/
 * Want to **contribute**? Great! Feel free to create a [PR](https://github.com/splunk/itsi-deep-dive-email-alert/pulls).
 
 * **Found a bug?** [Open an issue](https://github.com/splunk/itsi-deep-dive-email-alert/issues/new)
+
+* Want to **develop** your own actions in response to Splunk ITSI episodes? [Check this out!](https://www.splunk.com/blog/2019/01/17/tale-of-tinkering-with-splunk-it-service-intelligence-and-notables.html)
